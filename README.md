@@ -15,3 +15,4 @@ Folders description:
 Notebooks:
 * `Main_notebook` : main notebook containing our main pipelines
 * `Main_notebook_COLAB` : google COLAB version of the main notebook ( some of code is different )
+* `Test_notebook` : secondary notebook used for testing code on the project milestone 1 sample before testing on the larger samples because it is faster
