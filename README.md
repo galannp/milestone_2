@@ -1,6 +1,7 @@
 Project milestone 2 description : 
 
 ...
+
 Group : *Concatsanddogs*
 
 Folders description:
