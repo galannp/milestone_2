@@ -8,7 +8,7 @@ Folders description:
 *  `data` : contains the Quote-bank data from 2015 to 2020, as it was found in the google Drive
 *  `generated_data` : data files that have been generated from the original quotebank data
 *  `additional_datasets`: other datasets used in our analyses
-*  `documents` : contains reasearch papers and literature around our project idea
+*  `documents` : contains reasearch papers and literature around our project ideas
 *  `scripts` : contains all .py files implementing methods used in the main 
 
 
