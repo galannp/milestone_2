@@ -15,7 +15,7 @@
 **Notebooks:**
 * `Main_notebook` : main notebook containing our main pipelines
 * `Main_notebook_COLAB` : google COLAB version of the main notebook ( some of code is different )
-* `Test_notebook` : secondary notebook used for testing code on the project milestone 1 sample before testing on the larger samples because it is faster
+* `Test_notebook` : secondary notebook used for testing code on the project milestone 1 sample before testing on the larger samples because it is faster ( Note that test_notebook needs quotes-2019-nytimes.json and quotes-2019-nytimes.json.bz2 to be in the `generated_data` folder)
 
 **Project steps :**
 
