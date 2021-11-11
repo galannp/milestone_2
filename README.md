@@ -1,18 +1,51 @@
-# Project Milestone1 - Group Concatsanddogs
+# Project Milestone2 - Group Concatsanddogs
 
-## Title : 
-
+# The use of women's rights and gender equality rhetoric in the US
+ <!---[amina] --->
 ## Abstract:
-_A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?_
+<!---[amina] 
+ _A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?_ --->
+ 
+The concept of femonationalism, developed by the scholar Sara R. Farris, describes how women’s right and feminism are co-opted to reinforce nationalist discourses. The femonationalist ideological formation uses arguments to bring forwards anti-immigration, anti-Muslim and xenophobic ideas and policies. In her book [1], Sara R. Farris uses discourse analysis of right-wing parties, feminist intellectuals and femocrats* to demonstrate her argument. Her analysis focuses on Italy, Netherlands and France where she highlights the main topics of the ideology. First, the opposition between the non-western man who is an oppressor versus the non-western women who is a redeemable victim to save and secondly the belief that patriarchy is only existing in non-western cultures.
+In our case, we are interested in using quotations from The Quotebank database to study the use of women's rights and gender equality rhetoric in US. Especially, we are focusing on investigating if similar conclusions can be drawn.
+ 
+*A female politician or senior civil servant; a female bureaucrat in an agency dealing with women's issues.  
+[1] Farris, S. (2017). *In the Name of Women’s Rights*. Duke University Press. Retrieved from https://www.perlego.com/book/1465722/in-the-name-of-womens-rights-pdf (Original work published 2017)
 
 ## Research Questions:
-_A list of research questions you would like to address during the project._
+ <!---[amina]
+_A list of research questions you would like to address during the project._ --->
+We are focusing on research questions 1-3 (RQ 1-3) which have precise objective meanwhile RQ4 is an open-ended exploration if we have time.
+
+- RQ1: What?   
+How often "women's right" and "gender equality" ideas are quoted along with some mentions of immigration policies, of racial groups or low-wages workers status or religion (i.e. how often women's right are invoked in a femonationalist context)?
+or
+Can we identify different contexts for women's rights quotations? Can we relate one or multiple of these contexts to femonationalist rhetoric?
+(#RQ1 two suggestions are the same research question but approached once with a top-to-bottom approach and once with a bottom-to-top approach. In the first one we know the criteria and use them to defined what are femonationalist quotes, in the second we cluster the quotes and see if the criteria emerge from the cluster.
+
+- RQ2: Who?  
+ Is there a relationship between the association of women's right and elements of nationalist rhetoric and the speaker political orientation? 
+Is there a relationship between the femonationalist use of women's right rhetoric and speaker gender?
+
+- RQ3: When?   
+What is the time distribution of the femonationalist quotations ? Is there a relation between the femonationalist quotations and major political events (i.e. bombing in US, mass shooting, vote on feminist topics..)
+
+- RQ4   
+What is the sentiment analysis of the context of the quotation containing women's right mention ?
+Can we link the sentiment to the use of women's rights ideology?
+
+
 
 ## Proposed additional datasets (if any): 
+ [amina] keywords
+ [younes] parquet qids
 _List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible._
 
 ## Methods
-
+[amina] webscraping
+[valerian] kmeans
+[valerian] cluster
+[younes]sentiment analysis
 * **Step 0** - Amina - 
 
   - Manually looking for quotations in the database 
@@ -32,16 +65,18 @@ Short text topic modeling : [link 2](https://towardsdatascience.com/short-text-t
   - Pattern matching : library re - regular expressions
   - LDA (only for long texts, not likely to work)
 
-Sentiment analysis ? Deepmoji / Vader ?
+Sentiment analysis ? Deepmoji / Vader ?  [amina]
 
 ## Proposed timeline
+_A list of internal milestones up until project Milestone 3._
+
 
 ## Organization within the team: 
 
-_A list of internal milestones up until project Milestone 3._
 
 ## Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
-
+Dask?
+More webscraping? [amina]
 ## CURRENT Github and code structure : TODO : update
 
 **Folders description:**
