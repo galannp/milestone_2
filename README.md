@@ -43,9 +43,9 @@ Can we link the sentiment to the use of women's rights ideology?
 _List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible._
 
 ## Methods
-[amina] webscraping
-[valerian] kmeans
-[valerian] cluster
+ <!---[amina] ---> Webscraping : To scrape news websites and extract relevant keywords we use python libraries that parse html tree and natural language processing to get most frequents bigrams. The format of the website has to be manually inspected to define the relevant tag contents. In our case, two tags identifying the column of interest in the primary website page as well as a tag to identify the article itself is secondary pages are manually determined.       
+[valerian] kmeans.   
+[valerian] cluster.   
 [younes] - Sentiment analysis :  Multiple options are available but polarity scores from Vader ( in the NLTK library) could be used to judge if a quote is positive or negative. ( Other options would be Deepmoji, Flair, or XLNet). Alternatively a pretrained XLNet ( pytorch version) could be used to do the same thing.
 [younes] - QID to attributes & QID to readable labels :   From a dataframe containing the chosen quotes, the QID row ( only the first QID if many are available) is used to perform a left join with the a dataframe from the "speaker_attributes.parquet". Since some labels are still in QID format another join is performed between the remaining QIDs and "wikidata_labels_descriptions_quotebank.csv.bz2" . Code has been prepared to perform the same join but using chunks with the file containing all the wikidata labels ( "wikidata_labels_descriptions.csv.bz2") in case some QID weren't available in the quotebank version.
 * **Step 0** - Amina - 
