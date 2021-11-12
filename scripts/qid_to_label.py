@@ -68,20 +68,19 @@ def check_if_qid_modified(df):
     '''
     return df.str.contains(r'[Q][0-9]+').any()
 
-def check_merged_df_columns_if_qid(df):
-    print('column : nationality ', check_if_qid_modified(merged_df['nationality']))
-    print('column : gender ', check_if_qid_modified(merged_df['gender']))
-    print('column : ethnic_group ', check_if_qid_modified(merged_df['ethnic_group']))
-    print('column : US_congress_bio_ID ', check_if_qid_modified(merged_df['US_congress_bio_ID']))
-    print('column : occupation ', check_if_qid_modified(merged_df['occupation']))
-    print('column : party ', check_if_qid_modified(merged_df['party']))
-    print('column : academic_degree ', check_if_qid_modified(merged_df['academic_degree']))
-    print('column : id ', check_if_qid_modified(merged_df['id']))
-    print('column : label ', check_if_qid_modified(merged_df['label']))
-    print('column : candidacy ', check_if_qid_modified(merged_df['candidacy']))
-    print('column : type ', check_if_qid_modified(merged_df['type']))
-    print('column : religion ', check_if_qid_modified(merged_df['religion']))
-
+def check_df_columns_if_qid(df):
+    print('column : nationality ', check_if_qid_modified(df['nationality']))
+    print('column : gender ', check_if_qid_modified(df['gender']))
+    print('column : ethnic_group ', check_if_qid_modified(df['ethnic_group']))
+    print('column : US_congress_bio_ID ', check_if_qid_modified(df['US_congress_bio_ID']))
+    print('column : occupation ', check_if_qid_modified(df['occupation']))
+    print('column : party ', check_if_qid_modified(df['party']))
+    print('column : academic_degree ', check_if_qid_modified(df['academic_degree']))
+    print('column : id ', check_if_qid_modified(df['id']))
+    print('column : label ', check_if_qid_modified(df['label']))
+    print('column : candidacy ', check_if_qid_modified(df['candidacy']))
+    print('column : type ', check_if_qid_modified(df['type']))
+    print('column : religion ', check_if_qid_modified(df['religion']))
 
 
 

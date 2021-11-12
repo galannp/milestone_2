@@ -38,14 +38,16 @@ Can we link the sentiment to the use of women's rights ideology?
 
 ## Proposed additional datasets (if any): 
  [amina] keywords
- [younes] parquet qids
+ [younes] - Parquet files and QIDS : Samples of the Wikidata knowledgebase will be used to translate QID items in the dataset to readable labels with their description. After selecting what quotes we will work on, using the provided .parquet file and json we will load the corresponding attributes to each speaker. Some attributes such as the political party could be used in our analyses. Since multiple QIDs are given for the political party we might extract the date for each term, and only keep the one the one relevant to the quote. 
+ 
 _List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible._
 
 ## Methods
 [amina] webscraping
 [valerian] kmeans
 [valerian] cluster
-[younes]sentiment analysis
+[younes] - Sentiment analysis :  Multiple options are available but polarity scores from Vader ( in the NLTK library) could be used to judge if a quote is positive or negative. ( Other options would be Deepmoji, Flair, or XLNet). Alternatively a pretrained XLNet ( pytorch version) could be used to do the same thing.
+[younes] - QID to attributes & QID to readable labels :   From a dataframe containing the chosen quotes, the QID row ( only the first QID if many are available) is used to perform a left join with the a dataframe from the "speaker_attributes.parquet". Since some labels are still in QID format another join is performed between the remaining QIDs and "wikidata_labels_descriptions_quotebank.csv.bz2" . Code has been prepared to perform the same join but using chunks with the file containing all the wikidata labels ( "wikidata_labels_descriptions.csv.bz2") in case some QID weren't available in the quotebank version.
 * **Step 0** - Amina - 
 
   - Manually looking for quotations in the database 
