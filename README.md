@@ -37,10 +37,11 @@ Can we link the sentiment to the use of women's rights ideology?
 
 
 ## Proposed additional datasets (if any): 
- <!---[amina] ---> keywords
+ <!---[amina] ---> 
+ - Articles contents and Keywords: These two text files contains the article retrieved from usnews.com and the list of most frequent bigrams that we will use a keywords.
  
- 
- <!---[younes] ---> - Parquet files and QIDS : Samples of the Wikidata knowledgebase will be used to translate QID items in the dataset to readable labels with their description. After selecting what quotes we will work on, using the provided .parquet file and json we will load the corresponding attributes to each speaker. Some attributes such as the political party could be used in our analyses. Since multiple QIDs are given for the political party we might extract the date for each term, and only keep the one the one relevant to the quote. 
+ <!---[younes] ---> 
+ - Parquet files and QIDS : Samples of the Wikidata knowledgebase will be used to translate QID items in the dataset to readable labels with their description. After selecting what quotes we will work on, using the provided .parquet file and json we will load the corresponding attributes to each speaker. Some attributes such as the political party could be used in our analyses. Since multiple QIDs are given for the political party we might extract the date for each term, and only keep the one the one relevant to the quote. 
  
 _List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible._
 
