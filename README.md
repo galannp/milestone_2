@@ -45,19 +45,22 @@ Can we link the sentiment to the use of women's rights ideology?
 _List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible._
 
 ## Methods
- <!---[amina] --->- Webscraping : To scrape news websites and extract keywords related to women's right topic we use python libraries that parse html tree (*BeautifulSoup*) and natural language processing (*NLTK*) to get most frequents bigrams. The format of the website has to be manually inspected to define the relevant tag contents. In our case, two tags identifying the column of interest in the primary website page as well as a tag to identify the article itself is secondary pages are manually determined. The articles content is cleaned with regular expressions to keep only the relevant part of the text (e.g. copyright ignored).  
+ <!---[amina] --->
+ - Webscraping : To scrape news websites and extract keywords related to women's right topic we use python libraries that parse html tree (*BeautifulSoup*) and natural language processing (*NLTK*) to get most frequents bigrams. The format of the website has to be manually inspected to define the relevant tag contents. In our case, two tags identifying the column of interest in the primary website page as well as a tag to identify the article itself is secondary pages are manually determined. The articles content is cleaned with regular expressions to keep only the relevant part of the text (e.g. copyright ignored).  
+ 
+ <!---[valerian] --->
+ -  kmeans.    
  
  
- <!---[valerian] ---> -  kmeans.    
+ <!---[valerian] ---> 
+ -  cluster.   
+ 
+ <!---[younes] --->  
+ - Sentiment analysis :  Multiple options are available but polarity scores from VaderSentiment library ( in the NLTK library) could be used to judge if a quote is positive or negative and how positive or negative it is. The VaderSentiment tool has been created to work best on social media contents, which is appropriate as we are dealing with short texts. ( Other options would be Deepmoji, Flair, or XLNet). Alternatively a pretrained XLNet ( pytorch version) could be used to do the same thing.  
  
  
- <!---[valerian] ---> -  cluster.     
- 
- 
- <!---[younes] --->   - Sentiment analysis :  Multiple options are available but polarity scores from VaderSentiment library ( in the NLTK library) could be used to judge if a quote is positive or negative and how positive or negative it is. The VaderSentiment tool has been created to work best on social media contents, which is appropriate as we are dealing with short texts. ( Other options would be Deepmoji, Flair, or XLNet). Alternatively a pretrained XLNet ( pytorch version) could be used to do the same thing.  
- 
- 
- <!---[younes] --->   - QID to attributes & QID to readable labels :   From a dataframe containing the chosen quotes, the QID row ( only the first QID if many are available) is used to perform a left join with the a dataframe from the "speaker_attributes.parquet". Since some labels are still in QID format another join is performed between the remaining QIDs and "wikidata_labels_descriptions_quotebank.csv.bz2" . Code has been prepared to perform the same join but using chunks with the file containing all the wikidata labels ( "wikidata_labels_descriptions.csv.bz2") in case some QID weren't available in the quotebank version.  
+ <!---[younes] --->   
+ - QID to attributes & QID to readable labels :   From a dataframe containing the chosen quotes, the QID row ( only the first QID if many are available) is used to perform a left join with the a dataframe from the "speaker_attributes.parquet". Since some labels are still in QID format another join is performed between the remaining QIDs and "wikidata_labels_descriptions_quotebank.csv.bz2" . Code has been prepared to perform the same join but using chunks with the file containing all the wikidata labels ( "wikidata_labels_descriptions.csv.bz2") in case some QID weren't available in the quotebank version.  
  <!---   
 * **Step 2** - 
 Sbert, topic modeling [link 1](https://www.sbert.net/examples/applications/clustering/README.html#topic-modeling)
