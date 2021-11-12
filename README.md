@@ -43,20 +43,12 @@ Can we link the sentiment to the use of women's rights ideology?
 _List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible._
 
 ## Methods
- <!---[amina] ---> Webscraping : To scrape news websites and extract relevant keywords we use python libraries that parse html tree and natural language processing to get most frequents bigrams. The format of the website has to be manually inspected to define the relevant tag contents. In our case, two tags identifying the column of interest in the primary website page as well as a tag to identify the article itself is secondary pages are manually determined.       
-[valerian] kmeans.   
-[valerian] cluster.   
-[younes] - Sentiment analysis :  Multiple options are available but polarity scores from Vader ( in the NLTK library) could be used to judge if a quote is positive or negative. ( Other options would be Deepmoji, Flair, or XLNet). Alternatively a pretrained XLNet ( pytorch version) could be used to do the same thing.
-[younes] - QID to attributes & QID to readable labels :   From a dataframe containing the chosen quotes, the QID row ( only the first QID if many are available) is used to perform a left join with the a dataframe from the "speaker_attributes.parquet". Since some labels are still in QID format another join is performed between the remaining QIDs and "wikidata_labels_descriptions_quotebank.csv.bz2" . Code has been prepared to perform the same join but using chunks with the file containing all the wikidata labels ( "wikidata_labels_descriptions.csv.bz2") in case some QID weren't available in the quotebank version.
-* **Step 0** - Amina - 
-
-  - Manually looking for quotations in the database 
-
-* **Step 1** - 
-Using url of a newspaper with gender topics to list keyword* s related to women's right topic
-  - NLTK / spacey : NLTK easier to use
-  - Pattern matching : library re - regular expressions
-
+ <!---[amina] ---> - Webscraping : To scrape news websites and extract keywords related to women's right topic we use python libraries that parse html tree (*BeautifulSoup*) and natural language processing (*NLTK*) to get most frequents bigrams. The format of the website has to be manually inspected to define the relevant tag contents. In our case, two tags identifying the column of interest in the primary website page as well as a tag to identify the article itself is secondary pages are manually determined. The articles content is cleaned with regular expressions to keep only the relevant part of the text (e.g. copyright ignored).
+ <!---[valerian] --->  kmeans.   
+ <!---[valerian] --->   cluster.   
+ <!---[younes] --->   - Sentiment analysis :  Multiple options are available but polarity scores from Vader ( in the NLTK library) could be used to judge if a quote is positive or negative. ( Other options would be Deepmoji, Flair, or XLNet). Alternatively a pretrained XLNet ( pytorch version) could be used to do the same thing.
+ <!---[younes] --->   - QID to attributes & QID to readable labels :   From a dataframe containing the chosen quotes, the QID row ( only the first QID if many are available) is used to perform a left join with the a dataframe from the "speaker_attributes.parquet". Since some labels are still in QID format another join is performed between the remaining QIDs and "wikidata_labels_descriptions_quotebank.csv.bz2" . Code has been prepared to perform the same join but using chunks with the file containing all the wikidata labels ( "wikidata_labels_descriptions.csv.bz2") in case some QID weren't available in the quotebank version.
+ <!---
 * **Step 2** - 
 Sbert, topic modeling [link 1](https://www.sbert.net/examples/applications/clustering/README.html#topic-modeling)
 Short text topic modeling : [link 2](https://towardsdatascience.com/short-text-topic-modeling-70e50a57c883) ( not sure this will work because data maybe needs to be " smooth"
@@ -66,9 +58,9 @@ Short text topic modeling : [link 2](https://towardsdatascience.com/short-text-t
   - NLTK / spacey : NLTK easier to use
   - Pattern matching : library re - regular expressions
   - LDA (only for long texts, not likely to work)
-
-Sentiment analysis ? Deepmoji / Vader ?  [amina]
-
+---> 
+ <!---[amina] --->
+ - Sentiment analysis : To do sentiment analysis we plan to use the VaderSentiment library. In addition to analyze if a statement is positive or negative, this library also return a sentiment score to indicate how positive/negative the sentiment is. This tool has been created to work best on social media contents, which is appropriate as we are dealing with short texts.
 ## Proposed timeline
 _A list of internal milestones up until project Milestone 3._
 
@@ -77,8 +69,10 @@ _A list of internal milestones up until project Milestone 3._
 
 
 ## Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
-Dask?
-More webscraping? [amina]
+ <!---[amina] --->
+- Webscraping : Should we put refine the webscraping or is it out of the scope of the project? In case we should, which one of these seems the most appropriate refinement. Increase the set of articles implementing infinite scrolling? Increase the set of articles by adding other newspaper websites? Get rid of the Named Entities through NE recognition library?
+<!---[younes] --->
+- Dask?
 ## CURRENT Github and code structure : TODO : update
 
 **Folders description:**
