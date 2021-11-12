@@ -85,7 +85,7 @@ _A list of internal milestones up until project Milestone 3._
  <!---[amina] --->
 - Webscraping : Should we put refine the webscraping or is it out of the scope of the project? In case we should, which one of these seems the most appropriate refinement. Increase the set of articles implementing infinite scrolling? Increase the set of articles by adding other newspaper websites? Get rid of the Named Entities through NE recognition library?
 <!---[younes] --->
-- Dask?
+- Should we try implementing Dask for the initial filtering step ? It takes quite a while to select the intial quotes. It seems like 
 ## CURRENT Github and code structure : TODO : update
 
 **Folders description:**
